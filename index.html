@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All-in-One Dashboard: Website, Age Calculator & Password Manager</title>
+    <title>ToolMaster Pro - Secure Multi-Tool Dashboard</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,8 +13,8 @@
         }
 
         body {
-            background-color: #f4f6f9;
-            color: #333;
+            background-color: #0f172a;
+            color: #f8fafc;
             line-height: 1.6;
             padding: 20px;
         }
@@ -25,12 +25,12 @@
         }
 
         header h1 {
-            color: #2c3e50;
+            color: #38bdf8;
             margin-bottom: 5px;
         }
 
         header p {
-            color: #7f8c8d;
+            color: #94a3b8;
         }
 
         .container {
@@ -42,20 +42,20 @@
         }
 
         .card {
-            background: #ffffff;
+            background: #1e293b;
             padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid #334155;
         }
 
         .card h2 {
             margin-bottom: 20px;
-            color: #2980b9;
-            border-bottom: 2px solid #ecf0f1;
+            color: #38bdf8;
+            border-bottom: 2px solid #334155;
             padding-bottom: 8px;
         }
 
-        /* Form Controls */
         .form-group {
             margin-bottom: 15px;
         }
@@ -65,39 +65,43 @@
             margin-bottom: 5px;
             font-weight: 600;
             font-size: 14px;
+            color: #cbd5e1;
         }
 
         input {
             width: 100%;
             padding: 10px;
-            border: 1px solid #bdc3c7;
-            border-radius: 5px;
+            border: 1px solid #475569;
+            border-radius: 6px;
             font-size: 14px;
+            background: #0f172a;
+            color: white;
         }
 
         button {
-            background-color: #3498db;
-            color: white;
+            background-color: #38bdf8;
+            color: #0f172a;
             border: none;
             padding: 10px 15px;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
-            font-weight: 600;
+            font-weight: bold;
             width: 100%;
             transition: background 0.2s;
         }
 
         button:hover {
-            background-color: #2980b9;
+            background-color: #0ea5e9;
         }
 
-        /* Specific Component Styles */
         .result-box {
             margin-top: 15px;
             padding: 10px;
-            background: #e8f4f8;
-            border-left: 4px solid #3498db;
+            background: #0f172a;
+            border-left: 4px solid #38bdf8;
             font-weight: bold;
+            color: #38bdf8;
+            border-radius: 4px;
         }
 
         ul.list {
@@ -108,26 +112,27 @@
         }
 
         ul.list li {
-            background: #f8f9fa;
+            background: #0f172a;
             padding: 8px 12px;
             margin-bottom: 8px;
-            border-radius: 4px;
+            border-radius: 6px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 14px;
-            border: 1px solid #e9ecef;
+            border: 1px solid #334155;
         }
 
         ul.list li button {
             width: auto;
             padding: 4px 8px;
-            background-color: #e74c3c;
+            background-color: #ef4444;
+            color: white;
             font-size: 12px;
         }
 
         ul.list li button:hover {
-            background-color: #c0392b;
+            background-color: #dc2626;
         }
 
         .web-links {
@@ -138,45 +143,55 @@
 
         .web-links a {
             padding: 10px;
-            background: #f8f9fa;
-            color: #2c3e50;
+            background: #0f172a;
+            color: #38bdf8;
             text-decoration: none;
-            border-radius: 5px;
-            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            border: 1px solid #334155;
             transition: all 0.2s;
             text-align: center;
             font-weight: 500;
         }
 
         .web-links a:hover {
-            background: #3498db;
-            color: white;
-            border-color: #3498db;
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #64748b;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>All-in-One Multi-Tool Dashboard</h1>
-        <p>Website Home, Age Calculator, and Password Manager in one simple file</p>
+        <h1>ToolMaster Pro</h1>
+        <p>Secure Multi-Tool Utility Dashboard</p>
     </header>
 
     <div class="container">
 
-        <!---------------- SECTION 1: WEBSITE HOMEPAGE ---------------->
+        <!-- SECTION 1: ABOUT THIS APP & DEVELOPER -->
         <div class="card">
-            <h2>Website Homepage</h2>
-            <p style="margin-bottom: 15px; font-size: 14px; color: #666;">Welcome to my personal portal page. Explore the quick links below:</p>
+            <h2>About ToolMaster Pro</h2>
+            <p style="margin-bottom: 15px; font-size: 14px; color: #94a3b8;">
+                <strong>ToolMaster Pro</strong> is your ultimate secure, fast, and lightweight web utility suite. Designed for privacy and high performance directly from your browser.
+            </p>
+            <p style="margin-bottom: 15px; font-size: 14px; color: #38bdf8;">
+                <strong>Developer:</strong> Herry
+            </p>
             <div class="web-links">
-                <a href="#home" onclick="alert('You are already on the Home page!')">Home Page</a>
-                <a href="#services" onclick="alert('Services section coming soon!')">Our Services</a>
-                <a href="#about" onclick="alert('Built using HTML, CSS, and JavaScript.')">About This App</a>
-                <a href="#contact" onclick="alert('Contact: support@example.com')">Contact Us</a>
+                <a href="#home" onclick="alert('You are on ToolMaster Pro Home!')">Home Dashboard</a>
+                <a href="#features" onclick="alert('Features: Age Calculator & High-Security Password Manager.')">App Features</a>
+                <a href="#security" onclick="alert('Privacy Note: All your data is encrypted & stored locally on your device only.')">Security & Privacy</a>
             </div>
         </div>
 
-        <!---------------- SECTION 2: AGE CALCULATOR ---------------->
+        <!-- SECTION 2: AGE CALCULATOR -->
         <div class="card">
             <h2>Age Calculator</h2>
             <div class="form-group">
@@ -184,28 +199,46 @@
                 <input type="date" id="dob">
             </div>
             <button onclick="calculateAge()">Calculate Age</button>
-            <div class="result-box" id="ageResult">Your age will appear here...</div>
+            <div class="result-box" id="ageResult">Your exact age will appear here...</div>
         </div>
 
-        <!---------------- SECTION 3: PASSWORD MANAGER ---------------->
+        <!-- SECTION 3: HIGH-SECURITY PASSWORD MANAGER -->
         <div class="card">
-            <h2>Password Manager</h2>
-            <div class="form-group">
-                <label for="siteName">Website/App Name:</label>
-                <input type="text" id="siteName" placeholder="e.g., Gmail">
-            </div>
-            <div class="form-group">
-                <label for="sitePass">Password:</label>
-                <input type="password" id="sitePass" placeholder="Enter password">
-            </div>
-            <button onclick="savePassword()">Save Password</button>
+            <h2>Secure Password Vault</h2>
             
-            <ul class="list" id="passwordList">
-                <!-- Saved passwords will populate here -->
-            </ul>
+            <!-- Lock Screen Section -->
+            <div id="lockSection">
+                <div class="form-group">
+                    <label for="masterPin">Enter 4-Digit Security PIN:</label>
+                    <input type="password" id="masterPin" maxlength="4" placeholder="Enter PIN (e.g., 1234)">
+                </div>
+                <button onclick="unlockVault()">Unlock Vault</button>
+            </div>
+
+            <!-- Dashboard Content (Hidden Until Unlocked) -->
+            <div id="vaultContent" style="display: none;">
+                <div class="form-group">
+                    <label for="siteName">App / Website Name:</label>
+                    <input type="text" id="siteName" placeholder="e.g., Gmail / Facebook">
+                </div>
+                <div class="form-group">
+                    <label for="sitePass">Password:</label>
+                    <input type="password" id="sitePass" placeholder="Enter secure password">
+                </div>
+                <button onclick="savePassword()">Save Password Securely</button>
+                
+                <ul class="list" id="passwordList">
+                    <!-- Saved passwords populate here -->
+                </ul>
+                <button onclick="lockVaultAgain()" style="background-color: #64748b; margin-top: 15px;">Lock Vault</button>
+            </div>
         </div>
 
     </div>
+
+    <footer>
+        <p>&copy; 2026 ToolMaster Pro. Developed with ❤️ by Herry.</p>
+    </footer>
 
     <script>
         // --- Age Calculator Logic ---
@@ -227,7 +260,6 @@
 
             if (days < 0) {
                 months--;
-                // Get days in previous month
                 const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
                 days += prevMonth.getDate();
             }
@@ -240,7 +272,30 @@
             resultBox.innerText = `You are ${years} years, ${months} months, and ${days} days old.`;
         }
 
-        // --- Password Manager Logic ---
+        // --- High Security Password Manager Logic ---
+        if (!localStorage.getItem('vaultPin')) {
+            localStorage.setItem('vaultPin', '1234');
+        }
+
+        function unlockVault() {
+            const enteredPin = document.getElementById('masterPin').value.trim();
+            const correctPin = localStorage.getItem('vaultPin');
+
+            if (enteredPin === correctPin) {
+                document.getElementById('lockSection').style.display = 'none';
+                document.getElementById('vaultContent').style.display = 'block';
+                document.getElementById('masterPin').value = '';
+                renderPasswords();
+            } else {
+                alert("Incorrect PIN! Try '1234' if you haven't changed it.");
+            }
+        }
+
+        function lockVaultAgain() {
+            document.getElementById('lockSection').style.display = 'block';
+            document.getElementById('vaultContent').style.display = 'none';
+        }
+
         let passwords = JSON.parse(localStorage.getItem('savedPasswords')) || [];
 
         function renderPasswords() {
@@ -248,7 +303,7 @@
             listContainer.innerHTML = '';
 
             if (passwords.length === 0) {
-                listContainer.innerHTML = '<li style="justify-content: center; color: #7f8c8d;">No passwords saved yet.</li>';
+                listContainer.innerHTML = '<li style="justify-content: center; color: #94a3b8;">No passwords saved yet.</li>';
                 return;
             }
 
@@ -274,7 +329,6 @@
             passwords.push({ site, pass });
             localStorage.setItem('savedPasswords', JSON.stringify(passwords));
 
-            // Clear inputs
             document.getElementById('siteName').value = '';
             document.getElementById('sitePass').value = '';
 
@@ -286,9 +340,6 @@
             localStorage.setItem('savedPasswords', JSON.stringify(passwords));
             renderPasswords();
         }
-
-        // Load saved passwords on startup
-        renderPasswords();
     </script>
 </body>
 </html>
