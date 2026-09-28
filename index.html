@@ -3,111 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Utility Tools - Free Tools</title>
+    <title>All-in-One Dashboard: Website, Age Calculator & Password Manager</title>
     <style>
-        body {
-            background: #0f172a;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
             padding: 20px;
         }
-        h1 {
-            color: #38bdf8;
+
+        header {
+            text-align: center;
             margin-bottom: 30px;
         }
+
+        header h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #7f8c8d;
+        }
+
         .container {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 20px;
-            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .box {
-            background: #1e293b;
+
+        .card {
+            background: #ffffff;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            width: 100%;
-            max-width: 320px;
-            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            font-size: 20px;
+
+        .card h2 {
+            margin-bottom: 20px;
+            color: #2980b9;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+        }
+
+        /* Form Controls */
+        .form-group {
             margin-bottom: 15px;
         }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
         input {
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
-            border-radius: 6px;
-            border: 1px solid #475569;
-            background: #0f172a;
-            color: white;
-            font-size: 16px;
-            box-sizing: border-box;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 14px;
         }
+
         button {
-            background: #38bdf8;
-            color: #0f172a;
+            background-color: #3498db;
+            color: white;
             border: none;
-            padding: 10px;
-            width: 100%;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
             cursor: pointer;
-            margin-top: 5px;
+            font-weight: 600;
+            width: 100%;
+            transition: background 0.2s;
         }
+
         button:hover {
-            background: #0ea5e9;
+            background-color: #2980b9;
         }
-        .result {
+
+        /* Specific Component Styles */
+        .result-box {
             margin-top: 15px;
-            font-size: 15px;
-            color: #38bdf8;
-            word-break: break-all;
+            padding: 10px;
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            font-weight: bold;
+        }
+
+        ul.list {
+            list-style: none;
+            margin-top: 15px;
+            max-height: 180px;
+            overflow-y: auto;
+        }
+
+        ul.list li {
+            background: #f8f9fa;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            border: 1px solid #e9ecef;
+        }
+
+        ul.list li button {
+            width: auto;
+            padding: 4px 8px;
+            background-color: #e74c3c;
+            font-size: 12px;
+        }
+
+        ul.list li button:hover {
+            background-color: #c0392b;
+        }
+
+        .web-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .web-links a {
+            padding: 10px;
+            background: #f8f9fa;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid #dcdde1;
+            transition: all 0.2s;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .web-links a:hover {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
         }
     </style>
 </head>
 <body>
 
-    <h1>My Online Tools</h1>
+    <header>
+        <h1>All-in-One Multi-Tool Dashboard</h1>
+        <p>Website Home, Age Calculator, and Password Manager in one simple file</p>
+    </header>
 
     <div class="container">
-        <!-- Tool 1: Age Calculator -->
-        <div class="box">
-            <h2>Age Calculator</h2>
-            <input type="date" id="dob">
-            <button onclick="checkAge()">Calculate Age</button>
-            <div id="ans" class="result"></div>
+
+        <!---------------- SECTION 1: WEBSITE HOMEPAGE ---------------->
+        <div class="card">
+            <h2>Website Homepage</h2>
+            <p style="margin-bottom: 15px; font-size: 14px; color: #666;">Welcome to my personal portal page. Explore the quick links below:</p>
+            <div class="web-links">
+                <a href="#home" onclick="alert('You are already on the Home page!')">Home Page</a>
+                <a href="#services" onclick="alert('Services section coming soon!')">Our Services</a>
+                <a href="#about" onclick="alert('Built using HTML, CSS, and JavaScript.')">About This App</a>
+                <a href="#contact" onclick="alert('Contact: support@example.com')">Contact Us</a>
+            </div>
         </div>
 
-        <!-- Tool 2: Password Generator -->
-        <div class="box">
-            <h2>Password Generator</h2>
-            <input type="text" id="passwordBox" readonly placeholder="Click generate">
-            <button onclick="generatePassword()">Generate Password</button>
+        <!---------------- SECTION 2: AGE CALCULATOR ---------------->
+        <div class="card">
+            <h2>Age Calculator</h2>
+            <div class="form-group">
+                <label for="dob">Select Your Birth Date:</label>
+                <input type="date" id="dob">
+            </div>
+            <button onclick="calculateAge()">Calculate Age</button>
+            <div class="result-box" id="ageResult">Your age will appear here...</div>
         </div>
+
+        <!---------------- SECTION 3: PASSWORD MANAGER ---------------->
+        <div class="card">
+            <h2>Password Manager</h2>
+            <div class="form-group">
+                <label for="siteName">Website/App Name:</label>
+                <input type="text" id="siteName" placeholder="e.g., Gmail">
+            </div>
+            <div class="form-group">
+                <label for="sitePass">Password:</label>
+                <input type="password" id="sitePass" placeholder="Enter password">
+            </div>
+            <button onclick="savePassword()">Save Password</button>
+            
+            <ul class="list" id="passwordList">
+                <!-- Saved passwords will populate here -->
+            </ul>
+        </div>
+
     </div>
 
     <script>
-        // Age Calculator Logic
-        function checkAge() {
-            let dobValue = document.getElementById('dob').value;
-            let ansDiv = document.getElementById('ans');
+        // --- Age Calculator Logic ---
+        function calculateAge() {
+            const dobInput = document.getElementById('dob').value;
+            const resultBox = document.getElementById('ageResult');
 
-            if(!dobValue) {
-                ansDiv.innerHTML = "Please select date of birth!";
-                ansDiv.style.color = "red";
+            if (!dobInput) {
+                resultBox.innerText = "Please select a valid birth date!";
                 return;
             }
 
-            let birthDate = new Date(dobValue);
-            let today = new Date();
+            const birthDate = new Date(dobInput);
+            const today = new Date();
 
             let years = today.getFullYear() - birthDate.getFullYear();
             let months = today.getMonth() - birthDate.getMonth();
@@ -115,8 +227,9 @@
 
             if (days < 0) {
                 months--;
-                let lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
-                days += lastMonth.getDate();
+                // Get days in previous month
+                const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                days += prevMonth.getDate();
             }
 
             if (months < 0) {
@@ -124,22 +237,58 @@
                 months += 12;
             }
 
-            ansDiv.style.color = "#38bdf8";
-            ansDiv.innerHTML = `You are ${years}y, ${months}m, ${days}d old!`;
+            resultBox.innerText = `You are ${years} years, ${months} months, and ${days} days old.`;
         }
 
-        // Password Generator Logic
-        function generatePassword() {
-            let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$!";
-            let passwordLength = 10;
-            let password = "";
-            for (let i = 0; i < passwordLength; i++) {
-                let randomNumber = Math.floor(Math.random() * chars.length);
-                password += chars.substring(randomNumber, randomNumber + 1);
+        // --- Password Manager Logic ---
+        let passwords = JSON.parse(localStorage.getItem('savedPasswords')) || [];
+
+        function renderPasswords() {
+            const listContainer = document.getElementById('passwordList');
+            listContainer.innerHTML = '';
+
+            if (passwords.length === 0) {
+                listContainer.innerHTML = '<li style="justify-content: center; color: #7f8c8d;">No passwords saved yet.</li>';
+                return;
             }
-            document.getElementById('passwordBox').value = password;
-        }
-    </script>
 
+            passwords.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <span><strong>${item.site}:</strong> ${item.pass}</span>
+                    <button onclick="deletePassword(${index})">Delete</button>
+                `;
+                listContainer.appendChild(li);
+            });
+        }
+
+        function savePassword() {
+            const site = document.getElementById('siteName').value.trim();
+            const pass = document.getElementById('sitePass').value.trim();
+
+            if (!site || !pass) {
+                alert("Please fill in both fields.");
+                return;
+            }
+
+            passwords.push({ site, pass });
+            localStorage.setItem('savedPasswords', JSON.stringify(passwords));
+
+            // Clear inputs
+            document.getElementById('siteName').value = '';
+            document.getElementById('sitePass').value = '';
+
+            renderPasswords();
+        }
+
+        function deletePassword(index) {
+            passwords.splice(index, 1);
+            localStorage.setItem('savedPasswords', JSON.stringify(passwords));
+            renderPasswords();
+        }
+
+        // Load saved passwords on startup
+        renderPasswords();
+    </script>
 </body>
 </html>
