@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator - Free Online Tool</title>
+    <style>
+        body {
+            background: #0f172a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .box {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 6px;
+            border: 1px solid #475569;
+            background: #0f172a;
+            color: white;
+            font-size: 16px;
+        }
+        button {
+            background: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0ea5e9;
+        }
+        #ans {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Age Calculator</h2>
+        <input type="date" id="dob">
+        <button onclick="checkAge()">Calculate Age</button>
+        <div id="ans"></div>
+    </div>
+
+    <script>
+        function checkAge() {
+            let dobValue = document.getElementById('dob').value;
+            let ansDiv = document.getElementById('ans');
+
+            if(!dobValue) {
+                ansDiv.innerHTML = "Please select your date of birth first!";
+                ansDiv.style.color = "red";
+                return;
+            }
+
+            let birthDate = new Date(dobValue);
+            let today = new Date();
+
+            let years = today.getFullYear() - birthDate.getFullYear();
+            let months = today.getMonth() - birthDate.getMonth();
+            let days = today.getDate() - birthDate.getDate();
+
+            if (days < 0) {
+                months--;
+                let lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                days += lastMonth.getDate();
+            }
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            ansDiv.style.color = "#38bdf8";
+            ansDiv.innerHTML = `You are ${years} years, ${months} months, and ${days} days old!`;
+        }
+    </script>
+
+</body>
+</html>
